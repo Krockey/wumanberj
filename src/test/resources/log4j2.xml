@@ -46,8 +46,8 @@
     </Appenders>
 
     <Loggers>
-        <!-- level="${env:LOGGING_LEVEL_:-DEBUG}" will override spring-boot's logging.level.${loggerName}: ${logLevel} -->
-        <Root includeLocation="false" level="${env:LOGGING_LEVEL_:-INFO}">
+        <!-- level="${env:LOGGING_LEVEL_ROOT:-DEBUG}" will override spring-boot's logging.level.${loggerName}: ${logLevel} -->
+        <Root includeLocation="false" level="${env:LOGGING_LEVEL_ROOT:-INFO}">
             <AppenderRef ref="RollingRandomAccessFile"/>
             <AppenderRef ref="STDOUT"/>
         </Root>
